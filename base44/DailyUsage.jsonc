@@ -1,0 +1,40 @@
+{
+  "name": "DailyUsage",
+  "type": "object",
+  "properties": {
+    "customer": {
+      "type": "string",
+      "relationType": "one",
+      "relatedEntity": "Customer",
+      "title": "Macamiilka"
+    },
+    "usage_date": {
+      "type": "string",
+      "format": "date",
+      "title": "Taariikhda"
+    },
+    "kwh_used": {
+      "type": "number",
+      "title": "KWh La Isticmaalay"
+    },
+    "reading_type": {
+      "type": "string",
+      "enum": [
+        "meter",
+        "estimated",
+        "manual"
+      ],
+      "default": "meter",
+      "title": "Nooca Qirada"
+    },
+    "notes": {
+      "type": "string",
+      "title": "Qoraalka"
+    }
+  },
+  "required": [
+    "customer",
+    "usage_date",
+    "kwh_used"
+  ]
+}

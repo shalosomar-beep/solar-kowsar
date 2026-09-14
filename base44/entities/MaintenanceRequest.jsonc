@@ -1,0 +1,41 @@
+{
+  "name": "MaintenanceRequest",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "title": "Cinwaanka Codsiga"
+    },
+    "customer_name": {
+      "type": "string",
+      "title": "Macaamisha"
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ],
+      "default": "medium",
+      "title": "Muhimada"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "open",
+        "in_progress",
+        "resolved"
+      ],
+      "default": "open",
+      "title": "Xaaladda"
+    }
+  },
+  "required": [
+    "title",
+    "customer_name",
+    "priority",
+    "status"
+  ]
+}

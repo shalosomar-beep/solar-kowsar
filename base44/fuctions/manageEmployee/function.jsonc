@@ -1,0 +1,5 @@
+{
+  "type": "http",
+  "name": "manage_employee",
+  "description": "Hawlaha maamulka shaqaalaha oo xaddidan admin-keliya: abuur akawnta, beddel dooro, jooji, soo cel, fur, iyo diiwaan-gelin audit."
+}

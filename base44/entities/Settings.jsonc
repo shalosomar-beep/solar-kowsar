@@ -1,0 +1,64 @@
+{
+  "name": "Settings",
+  "type": "object",
+  "properties": {
+    "company_name": {
+      "type": "string",
+      "title": "Magaca Shirkadda"
+    },
+    "company_phone": {
+      "type": "string",
+      "title": "Telefoonka Shirkadda"
+    },
+    "company_email": {
+      "type": "string",
+      "title": "Emailka Shirkadda"
+    },
+    "currency": {
+      "type": "string",
+      "enum": [
+        "USD",
+        "SOS"
+      ],
+      "default": "USD",
+      "title": "Lacagta"
+    },
+    "rate_per_kwh": {
+      "type": "number",
+      "title": "Qiimaha KWh"
+    },
+    "billing_cycle": {
+      "type": "string",
+      "enum": [
+        "monthly",
+        "weekly",
+        "bi_monthly"
+      ],
+      "default": "monthly",
+      "title": "Habka Billing"
+    },
+    "late_fee": {
+      "type": "number",
+      "title": "Cadaadis Lacag (Dhaafis)"
+    },
+    "grace_period_days": {
+      "type": "number",
+      "title": "Maalmaha Dhaafinta"
+    },
+    "min_balance_alert": {
+      "type": "number",
+      "title": "Haraaga Ugu Hooseeya (Ogeysiis)"
+    },
+    "evc_plus_number": {
+      "type": "string",
+      "title": "Lambarka EVC Plus"
+    },
+    "zaad_number": {
+      "type": "string",
+      "title": "Lambarka Zaad"
+    }
+  },
+  "required": [
+    "company_name"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "name": "Notification",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "title": "Cinwaanka"
+    },
+    "message": {
+      "type": "string",
+      "title": "Fariinta"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "billing",
+        "maintenance",
+        "general",
+        "warning"
+      ],
+      "default": "general",
+      "title": "Nooca"
+    },
+    "customer": {
+      "type": "string",
+      "relationType": "one",
+      "relatedEntity": "Customer",
+      "title": "Macamiilka"
+    },
+    "is_read": {
+      "type": "boolean",
+      "default": false,
+      "title": "La Akhriday"
+    }
+  },
+  "required": [
+    "title",
+    "message"
+  ]
+}

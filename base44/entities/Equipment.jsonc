@@ -1,0 +1,59 @@
+{
+  "name": "Equipment",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Magaca Qalabka"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "battery",
+        "inverter",
+        "solar_panel",
+        "generator",
+        "smart_meter"
+      ],
+      "default": "battery",
+      "title": "Nooca Qalabka"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "online",
+        "offline",
+        "warning"
+      ],
+      "default": "online",
+      "title": "Xaaladda"
+    },
+    "location": {
+      "type": "string",
+      "title": "Goobta"
+    },
+    "battery_level": {
+      "type": "number",
+      "title": "Darajada Battery-da (%)"
+    },
+    "temperature": {
+      "type": "number",
+      "title": "Kulka (\u00b0C)"
+    },
+    "health": {
+      "type": "number",
+      "title": "Caafimaadka (%)"
+    },
+    "serial_number": {
+      "type": "string",
+      "title": "Lambarka Siiraadka"
+    }
+  },
+  "required": [
+    "name",
+    "category",
+    "status",
+    "location",
+    "serial_number"
+  ]
+}

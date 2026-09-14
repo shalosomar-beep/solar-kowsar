@@ -1,0 +1,51 @@
+{
+  "name": "Tariff",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Magaca Qiimaynta"
+    },
+    "description": {
+      "type": "string",
+      "title": "Faahfaahinta"
+    },
+    "rate_per_kwh": {
+      "type": "number",
+      "title": "Qiimaha/kWh"
+    },
+    "currency": {
+      "type": "string",
+      "enum": [
+        "USD",
+        "SOS"
+      ],
+      "default": "USD",
+      "title": "Lacagta"
+    },
+    "effective_date": {
+      "type": "string",
+      "format": "date",
+      "title": "Taariikhda"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "inactive"
+      ],
+      "default": "active",
+      "title": "Xaaladda"
+    },
+    "is_default": {
+      "type": "boolean",
+      "default": false,
+      "title": "Qiimaynta Caadiga ah"
+    }
+  },
+  "required": [
+    "name",
+    "rate_per_kwh",
+    "status"
+  ]
+}

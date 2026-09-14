@@ -1,0 +1,30 @@
+{
+  "name": "Vendor",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Magaca"
+    },
+    "contact": {
+      "type": "string",
+      "title": "Xiriiriyaha"
+    },
+    "phone": {
+      "type": "string",
+      "title": "Telefoonka"
+    },
+    "category": {
+      "type": "string",
+      "title": "Qaybta"
+    },
+    "payment_terms": {
+      "type": "string",
+      "title": "Shuruudaha Lacag Bixinta"
+    }
+  },
+  "required": [
+    "name",
+    "phone"
+  ]
+}

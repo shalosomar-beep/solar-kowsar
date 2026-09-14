@@ -1,0 +1,53 @@
+{
+  "name": "SolarData",
+  "type": "object",
+  "properties": {
+    "usage_date": {
+      "type": "string",
+      "format": "date",
+      "title": "Taariikhda"
+    },
+    "production_kwh": {
+      "type": "number",
+      "title": "Wax-soo-saarka (kWh)"
+    },
+    "consumption_kwh": {
+      "type": "number",
+      "title": "Isticmaalka (kWh)"
+    },
+    "location": {
+      "type": "string",
+      "title": "Goobta"
+    },
+    "efficiency": {
+      "type": "number",
+      "title": "Taynta (%)"
+    },
+    "weather": {
+      "type": "string",
+      "title": "Cimilada"
+    },
+    "sun_hours": {
+      "type": "number",
+      "title": "Saacadaha Qoraxda"
+    },
+    "peak_power_kw": {
+      "type": "number",
+      "title": "Awoodda Ugu Sareysa (kW)"
+    },
+    "inverter_status": {
+      "type": "string",
+      "enum": [
+        "online",
+        "warning",
+        "offline"
+      ],
+      "default": "online",
+      "title": "Xaaladda Inverter-ka"
+    }
+  },
+  "required": [
+    "usage_date",
+    "production_kwh"
+  ]
+}

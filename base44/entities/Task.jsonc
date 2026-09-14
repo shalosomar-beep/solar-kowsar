@@ -1,0 +1,58 @@
+{
+  "name": "Task",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "title": "Cinwaanka"
+    },
+    "customer": {
+      "type": "string",
+      "relationType": "one",
+      "relatedEntity": "Customer",
+      "title": "Macmiilka"
+    },
+    "location": {
+      "type": "string",
+      "title": "Goobta"
+    },
+    "technician": {
+      "type": "string",
+      "relationType": "one",
+      "relatedEntity": "Staff",
+      "title": "Farsamaha"
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "urgent"
+      ],
+      "default": "medium",
+      "title": "Muhimada"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "open",
+        "assigned",
+        "in_progress",
+        "completed"
+      ],
+      "default": "open",
+      "title": "Xaaladda"
+    },
+    "due_date": {
+      "type": "string",
+      "format": "date",
+      "title": "Taariikhda"
+    }
+  },
+  "required": [
+    "title",
+    "priority",
+    "status"
+  ]
+}

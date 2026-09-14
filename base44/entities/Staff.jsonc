@@ -1,0 +1,54 @@
+{
+  "name": "Staff",
+  "type": "object",
+  "properties": {
+    "full_name": {
+      "type": "string",
+      "title": "Magaca Shaqaalaha"
+    },
+    "phone": {
+      "type": "string",
+      "title": "Telefoonka"
+    },
+    "role": {
+      "type": "string",
+      "enum": [
+        "technician",
+        "operator",
+        "manager",
+        "other"
+      ],
+      "default": "technician",
+      "title": "Doorka"
+    },
+    "location": {
+      "type": "string",
+      "title": "Goobta"
+    },
+    "specialization": {
+      "type": "string",
+      "title": "Khasnada"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "available",
+        "on_task",
+        "inactive"
+      ],
+      "default": "available",
+      "title": "Xaaladda"
+    },
+    "hire_date": {
+      "type": "string",
+      "format": "date",
+      "title": "Taariikhda Qorista"
+    }
+  },
+  "required": [
+    "full_name",
+    "phone",
+    "role",
+    "status"
+  ]
+}

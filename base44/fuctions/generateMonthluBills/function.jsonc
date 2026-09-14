@@ -1,0 +1,11 @@
+{
+  "type": "scheduled",
+  "name": "monthly_billing",
+  "description": "Si otomaatig ah u abuur biilasha macaamiisha bishii ee la dhammaaday, adigoo isticmaalaya xogda isticmaalka korontada. Waxaa la socda 1-aad bishii kasta.",
+  "is_active": true,
+  "schedule_mode": "recurring",
+  "schedule_type": "simple",
+  "repeat_unit": "months",
+  "repeat_on_day_of_month": 1,
+  "start_time": "00:00"
+}

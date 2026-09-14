@@ -1,0 +1,75 @@
+{
+  "name": "Customer",
+  "type": "object",
+  "properties": {
+    "full_name": {
+      "type": "string",
+      "title": "Magaca Oo Dhan"
+    },
+    "phone": {
+      "type": "string",
+      "title": "Telefoonka"
+    },
+    "email": {
+      "type": "string",
+      "title": "Email"
+    },
+    "address": {
+      "type": "string",
+      "title": "Cinwaanka"
+    },
+    "city": {
+      "type": "string",
+      "title": "Magaalada"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "inactive",
+        "suspended"
+      ],
+      "default": "active",
+      "title": "Xaalada"
+    },
+    "meter_number": {
+      "type": "string",
+      "title": "Nambarka Meter-ka"
+    },
+    "solar_panel_type": {
+      "type": "string",
+      "title": "Nooca Solar Panel"
+    },
+    "solar_capacity_kw": {
+      "type": "number",
+      "title": "Awoodda Solar (KW)"
+    },
+    "installation_date": {
+      "type": "string",
+      "format": "date",
+      "title": "Taariikhda La Dhigay"
+    },
+    "monthly_rate": {
+      "type": "number",
+      "title": "Qiimaha Bishii ($)"
+    },
+    "notes": {
+      "type": "string",
+      "title": "Qoraalka"
+    },
+    "meter_status": {
+      "type": "string",
+      "enum": [
+        "online",
+        "offline"
+      ],
+      "default": "online",
+      "title": "Xaalada Meter-ka"
+    }
+  },
+  "required": [
+    "full_name",
+    "phone",
+    "meter_number"
+  ]
+}

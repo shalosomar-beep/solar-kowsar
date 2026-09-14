@@ -1,0 +1,64 @@
+{
+  "name": "Billing",
+  "type": "object",
+  "properties": {
+    "customer": {
+      "type": "string",
+      "relationType": "one",
+      "relatedEntity": "Customer",
+      "title": "Macamiilka"
+    },
+    "billing_month": {
+      "type": "string",
+      "title": "Bisha Billing"
+    },
+    "kwh_used": {
+      "type": "number",
+      "title": "KWh La Isticmaalay"
+    },
+    "rate_per_kwh": {
+      "type": "number",
+      "title": "Qiimaha KWh ($)"
+    },
+    "total_amount": {
+      "type": "number",
+      "title": "Wadarta ($)"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "paid",
+        "overdue",
+        "cancelled"
+      ],
+      "default": "pending",
+      "title": "Xaalada"
+    },
+    "payment_date": {
+      "type": "string",
+      "format": "date",
+      "title": "Taariikhda Lacag Bixinta"
+    },
+    "payment_method": {
+      "type": "string",
+      "enum": [
+        "cash",
+        "evc_plus",
+        "zaad",
+        "bank_transfer"
+      ],
+      "title": "Habka Lacag Bixinta"
+    },
+    "notes": {
+      "type": "string",
+      "title": "Qoraalka"
+    }
+  },
+  "required": [
+    "customer",
+    "billing_month",
+    "kwh_used",
+    "total_amount"
+  ]
+}

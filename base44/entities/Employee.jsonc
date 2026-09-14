@@ -1,0 +1,88 @@
+{
+  "name": "Employee",
+  "type": "object",
+  "properties": {
+    "email": {
+      "type": "string",
+      "title": "Emailka"
+    },
+    "full_name": {
+      "type": "string",
+      "title": "Magaca Buuxa"
+    },
+    "role": {
+      "type": "string",
+      "enum": [
+        "admin",
+        "manager",
+        "technician",
+        "billing",
+        "customer"
+      ],
+      "default": "technician",
+      "title": "Doorka"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "suspended",
+        "deactivated"
+      ],
+      "default": "active",
+      "title": "Xaaladda Akawnta"
+    },
+    "phone": {
+      "type": "string",
+      "title": "Telefoonka"
+    },
+    "department": {
+      "type": "string",
+      "title": "Qaybta"
+    },
+    "hired_date": {
+      "type": "string",
+      "format": "date",
+      "title": "Taariikhda Qorista"
+    },
+    "notes": {
+      "type": "string",
+      "title": "Fikirrada"
+    }
+  },
+  "required": [
+    "email",
+    "full_name",
+    "role",
+    "status"
+  ],
+  "rls": {
+    "read": {
+      "$or": [
+        {
+          "data.email": "{{user.email}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

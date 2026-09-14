@@ -1,0 +1,45 @@
+{
+  "name": "Location",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Magaca Goobta"
+    },
+    "city": {
+      "type": "string",
+      "title": "Magaalada"
+    },
+    "address": {
+      "type": "string",
+      "title": "Cinwaanka"
+    },
+    "total_panels": {
+      "type": "number",
+      "title": "Tirada Panels"
+    },
+    "total_capacity_kw": {
+      "type": "number",
+      "title": "Awoodda Guud (KW)"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "maintenance",
+        "inactive"
+      ],
+      "default": "active",
+      "title": "Xaalada"
+    },
+    "installation_date": {
+      "type": "string",
+      "format": "date",
+      "title": "Taariikhda La Dhigay"
+    }
+  },
+  "required": [
+    "name",
+    "city"
+  ]
+}

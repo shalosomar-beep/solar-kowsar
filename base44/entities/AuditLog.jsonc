@@ -1,0 +1,57 @@
+{
+  "name": "AuditLog",
+  "type": "object",
+  "properties": {
+    "action": {
+      "type": "string",
+      "title": "Hawsha La Qabtay"
+    },
+    "performed_by_email": {
+      "type": "string",
+      "title": "Emailka Fuliyaha"
+    },
+    "performed_by_name": {
+      "type": "string",
+      "title": "Magaca Fuliyaha"
+    },
+    "target_email": {
+      "type": "string",
+      "title": "Emailka La Fuliyay"
+    },
+    "details": {
+      "type": "string",
+      "title": "Faahfaahinta"
+    },
+    "timestamp": {
+      "type": "string",
+      "title": "Waqtiga"
+    }
+  },
+  "required": [
+    "action",
+    "performed_by_email",
+    "timestamp"
+  ],
+  "rls": {
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

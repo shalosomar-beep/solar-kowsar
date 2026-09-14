@@ -1,0 +1,65 @@
+{
+  "name": "Alarm",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Magaca Ciladda"
+    },
+    "alarm_id": {
+      "type": "string",
+      "title": "Aqoonsiga Ciladda"
+    },
+    "severity": {
+      "type": "string",
+      "enum": [
+        "critical",
+        "warning",
+        "info"
+      ],
+      "default": "warning",
+      "title": "Halista"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "power_outage",
+        "cable_damage",
+        "battery_low",
+        "meter_stopped",
+        "inverter_warning",
+        "other"
+      ],
+      "default": "other",
+      "title": "Nooca Ciladda"
+    },
+    "location": {
+      "type": "string",
+      "title": "Goobta"
+    },
+    "description": {
+      "type": "string",
+      "title": "Faahfaahinta"
+    },
+    "alarm_date": {
+      "type": "string",
+      "format": "date",
+      "title": "Taariikhda"
+    },
+    "alarm_time": {
+      "type": "string",
+      "title": "Saacad"
+    },
+    "acknowledged": {
+      "type": "boolean",
+      "default": false,
+      "title": "La Firtiray"
+    }
+  },
+  "required": [
+    "name",
+    "severity",
+    "type",
+    "location"
+  ]
+}

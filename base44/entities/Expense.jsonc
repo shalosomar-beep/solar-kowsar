@@ -1,0 +1,71 @@
+{
+  "name": "Expense",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "title": "Cinwaanka Kharashka"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "maintenance",
+        "salaries",
+        "equipment",
+        "transport",
+        "utilities",
+        "rent",
+        "other"
+      ],
+      "default": "other",
+      "title": "Qaybta"
+    },
+    "amount": {
+      "type": "number",
+      "title": "Qadarka ($)"
+    },
+    "expense_date": {
+      "type": "string",
+      "format": "date",
+      "title": "Taariikhda"
+    },
+    "payment_method": {
+      "type": "string",
+      "enum": [
+        "cash",
+        "evc_plus",
+        "zaad",
+        "bank_transfer"
+      ],
+      "title": "Habka Bixinta"
+    },
+    "vendor": {
+      "type": "string",
+      "title": "Shirkadda/Qofka"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "paid",
+        "overdue"
+      ],
+      "default": "pending",
+      "title": "Xaaladda"
+    },
+    "equipment_name": {
+      "type": "string",
+      "title": "Magaca Qalabka"
+    },
+    "notes": {
+      "type": "string",
+      "title": "Qoraalka"
+    }
+  },
+  "required": [
+    "title",
+    "category",
+    "amount",
+    "expense_date"
+  ]
+}
