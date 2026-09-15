@@ -21,6 +21,12 @@ Run the full local development environment from the project root:
 base44 dev
 ```
 
+The equivalent project command is:
+
+```bash
+npm run dev:base44
+```
+
 `base44 dev` starts the local Base44 development backend and, when this app is configured for it, also starts the frontend dev server for you. Use the frontend URL printed by the command.
 
 For example, when the Base44 project config includes a `serveCommand`, `base44 dev` can launch the frontend too:

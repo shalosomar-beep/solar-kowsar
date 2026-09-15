@@ -49,7 +49,16 @@ const AuthenticatedApp = () => {
   }
 
   if (authError) {
-    if (authError.type === 'user_not_registered') {
+    if (authError.type === 'configuration_missing') {
+      return (
+        <div className="fixed inset-0 flex items-center justify-center bg-zinc-950 px-6 text-center">
+          <div className="max-w-md space-y-3">
+            <h1 className="text-xl font-semibold text-white">Base44 backend is not configured</h1>
+            <p className="text-sm text-zinc-400">{authError.message}</p>
+          </div>
+        </div>
+      );
+    } else if (authError.type === 'user_not_registered') {
       return <UserNotRegisteredError />;
     } else if (authError.type === 'account_suspended') {
       return <SuspendedScreen />;
